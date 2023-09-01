@@ -91,11 +91,11 @@ namespace SampleWebApiAspNetCore.Controllers.v1
             }
 
             HoloIDEntity newHoloIDItem = _holoIDRepository.GetSingle(toAdd.Id);
-            HoloIDDto holoIDDto = _mapper.Map<HoloIDDto>(holoIDCreateDto);
+            HoloIDDto HoloIDDto = _mapper.Map<HoloIDDto>(newHoloIDItem);
 
             return CreatedAtRoute(nameof(AddHoloID),
                 new { version = version.ToString(), id = newHoloIDItem.Id },
-                _linkService.ExpandSingleHoloIDItem(holoIDDto, holoIDDto.Id, version));
+                _linkService.ExpandSingleHoloIDItem(HoloIDDto, HoloIDDto.Id, version));
         }
 
         [HttpPatch("{id:int}", Name = nameof(PartiallyUpdateHoloID))]
