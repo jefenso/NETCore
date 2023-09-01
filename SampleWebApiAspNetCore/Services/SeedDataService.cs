@@ -5,12 +5,12 @@ namespace SampleWebApiAspNetCore.Services
 {
     public class SeedDataService : ISeedDataService
     {
-        public void Initialize(FoodDbContext context)
+        public void Initialize(HoloIDDbContext context)
         {
-            context.FoodItems.Add(new FoodEntity() { Calories = 1000, Type = "Starter", Name = "Lasagne", Created = DateTime.Now });
-            context.FoodItems.Add(new FoodEntity() { Calories = 1100, Type = "Main", Name = "Hamburger", Created = DateTime.Now });
-            context.FoodItems.Add(new FoodEntity() { Calories = 1200, Type = "Dessert", Name = "Spaghetti", Created = DateTime.Now });
-            context.FoodItems.Add(new FoodEntity() { Calories = 1300, Type = "Starter", Name = "Pizza", Created = DateTime.Now });
+            context.HoloIDItems.Add(new HoloIDEntity() { Gen = 1, Group = "Area 15", Name = "Moona Hoshinova", Created = DateTime.Now });
+            context.HoloIDItems.Add(new HoloIDEntity() { Gen = 1, Group = "Area 15", Name = "Ayunda Risu", Created = DateTime.Now });
+            context.HoloIDItems.Add(new HoloIDEntity() { Gen = 2, Group = "Holoro", Name = "Pavolia Reine", Created = DateTime.Now });
+            context.HoloIDItems.Add(new HoloIDEntity() { Gen = 3, Group = "HoloH3ro", Name = "Kaela Kovalskia", Created = DateTime.Now });
 
             context.SaveChanges();
         }

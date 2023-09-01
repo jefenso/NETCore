@@ -3,13 +3,13 @@ using SampleWebApiAspNetCore.Entities;
 
 namespace SampleWebApiAspNetCore.Repositories
 {
-    public class FoodDbContext : DbContext
+    public class HoloIDDbContext : DbContext
     {
-        public FoodDbContext(DbContextOptions<FoodDbContext> options)
+        public HoloIDDbContext(DbContextOptions<HoloIDDbContext> options)
             : base(options)
         {
         }
 
-        public DbSet<FoodEntity> FoodItems { get; set; } = null!;
+        public DbSet<HoloIDEntity> HoloIDItems { get; set; } = null!;
     }
 }

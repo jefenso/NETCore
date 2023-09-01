@@ -5,7 +5,7 @@ namespace SampleWebApiAspNetCore.Controllers.v2
     [ApiController]
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    public class FoodsController : ControllerBase
+    public class HoloIDController : ControllerBase
     {
         [HttpGet]
         public ActionResult Get()
